@@ -1,0 +1,20 @@
+.nav {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: #f55252;
+  height: 5em;
+  color: #fff;
+  text-shadow: 3px 4px 15px #000;
+}
+.titlePage {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.titlePage img {
+  filter: drop-shadow(3px 4px 5px #000);
+}

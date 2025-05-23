@@ -1,0 +1,10 @@
+.sectionSongs {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+body {
+  background-color: #8080801f;
+}
