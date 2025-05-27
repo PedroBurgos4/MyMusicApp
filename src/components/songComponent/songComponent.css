@@ -9,4 +9,30 @@
 
 .song div {
   margin: 0.5em;
+  font-size: 0.7em;
+}
+
+.add {
+  background-color: #f57e68;
+  color: #fff;
+  border: none;
+  border-radius: 1.2em;
+  font-size: 0.6em;
+  padding: 0.5em;
+  width: 8em;
+}
+.add:hover {
+  background-color: #c36554;
+}
+.remove {
+  background-color: #f55252;
+  color: #fff;
+  border: none;
+  border-radius: 1.2em;
+  font-size: 0.6em;
+  padding: 0.5em;
+  width: 8em;
+}
+.remove:hover {
+  background-color: #cf4747;
 }

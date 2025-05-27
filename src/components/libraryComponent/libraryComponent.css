@@ -1,0 +1,9 @@
+.titleList {
+  margin-top: 1em;
+}
+.songList {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}

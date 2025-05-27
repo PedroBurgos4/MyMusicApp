@@ -1,0 +1,22 @@
+.searchInput {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.searchInput input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.searchList {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
