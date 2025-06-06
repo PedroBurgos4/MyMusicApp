@@ -7,9 +7,6 @@ const SearchResults = (props) => {
   let album = useFetch(
     `https://www.theaudiodb.com/api/v1/json/2/searchalbum.php?s=${artist}`
   );
-  console.log("en el componente");
-
-  console.log(album);
 
   return (
     <div className="sectionSongs">

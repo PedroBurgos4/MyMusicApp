@@ -6,8 +6,6 @@ const SearchBar = (props) => {
   };
   const searchEnter = (e) => {
     if (e.key === "Enter") {
-      console.log(e.key);
-
       let artist = document.getElementById("artist").value.toLowerCase();
       props.setArtist(artist);
     }

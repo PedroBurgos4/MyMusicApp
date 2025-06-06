@@ -7,9 +7,7 @@ const SongDetail = () => {
   let album = useFetch(
     `https://www.theaudiodb.com/api/v1/json/2/album.php?m=${idalbum.id}`
   );
-  console.log("en el componente");
 
-  console.log(album);
   return (
     <div className="sectionAlbumDetail">
       <Link to="/">
