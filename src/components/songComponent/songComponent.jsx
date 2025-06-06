@@ -1,6 +1,7 @@
 import "./songComponent.css";
+import { Link } from "react-router";
 const Song = (props) => {
-  const { number, name, artist, album, time, type, ...functions } = props;
+  const { number, name, artist, album, id } = props;
   return (
     <div className="song">
       <div>
@@ -15,23 +16,11 @@ const Song = (props) => {
       <div>
         <p>{album}</p>
       </div>
+
       <div>
-        <p>{time}</p>
-      </div>
-      <div>
-        {type === "add" && (
-          <button className="add" onClick={() => functions.addSong(props)}>
-            Agregar a mi biblioteca
-          </button>
-        )}
-        {type === "remove" && (
-          <button
-            className="remove"
-            onClick={() => functions.removeSong(props)}
-          >
-            Quitar de mi biblioteca
-          </button>
-        )}
+        <Link to={`/song/${id}`}>
+          <button className="add">Ver detalles</button>
+        </Link>
       </div>
     </div>
   );
