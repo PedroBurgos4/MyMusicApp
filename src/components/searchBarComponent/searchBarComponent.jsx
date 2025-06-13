@@ -1,7 +1,17 @@
-import "./searchBarComponent.css";
+// import "./searchBarComponent.css";
+
+import { useState } from "react";
+import {
+  SearchBarStyled,
+  SearchInput,
+  SearchButton,
+  Input,
+} from "./SearchBarComponentStyled";
 const SearchBar = (props) => {
+  const [isClick, setisClick] = useState(false);
   const SearchArtists = () => {
     let artist = document.getElementById("artist").value.toLowerCase();
+    setisClick(!isClick);
     props.setArtist(artist);
   };
   const searchEnter = (e) => {
@@ -12,19 +22,19 @@ const SearchBar = (props) => {
   };
 
   return (
-    <section className="searchBar">
-      <div className="searchInput">
-        <input
+    <SearchBarStyled>
+      <SearchInput>
+        <Input
           type="text"
           placeholder="Buscar artista"
           id="artist"
           onKeyDown={(e) => searchEnter(e)}
         />
-        <button className="searchButton" onClick={SearchArtists}>
+        <SearchButton isClicked={isClick} onClick={SearchArtists}>
           Buscar
-        </button>
-      </div>
-    </section>
+        </SearchButton>
+      </SearchInput>
+    </SearchBarStyled>
   );
 };
 export default SearchBar;

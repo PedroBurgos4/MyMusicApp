@@ -1,9 +1,10 @@
-import "./songComponent.css";
+// import "./songComponent.css";
 import { Link } from "react-router";
+import { SongStyled, AddStyled } from "./SongComponentStyled";
 const Song = (props) => {
   const { number, name, artist, album, id } = props;
   return (
-    <div className="song">
+    <SongStyled>
       <div>
         <p>{number}</p>
       </div>
@@ -19,10 +20,10 @@ const Song = (props) => {
 
       <div>
         <Link to={`/song/${id}`}>
-          <button className="add">Ver detalles</button>
+          <AddStyled>Ver detalles</AddStyled>
         </Link>
       </div>
-    </div>
+    </SongStyled>
   );
 };
 

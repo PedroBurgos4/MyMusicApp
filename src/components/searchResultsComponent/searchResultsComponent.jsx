@@ -1,6 +1,7 @@
 import Song from "../songComponent/songComponent";
-import "./searchResultsComponent.css";
+// import "./searchResultsComponent.css";
 import useFetch from "../../hooks/useFetch";
+import { SectionSongs, SearchList } from "./SearchResultsComponentStyled";
 const SearchResults = (props) => {
   const { artist } = props;
   console.log(artist);
@@ -9,11 +10,10 @@ const SearchResults = (props) => {
   );
 
   return (
-    <div className="sectionSongs">
+    <SectionSongs>
       {album.loading === true && <p>Cargando...</p>}
       {album.error !== null && <p>{album.error}</p>}
-
-      <section className="searchList">
+      <SearchList>
         {album.data !== null &&
           album.data.album.map((element, index) => {
             return (
@@ -27,8 +27,8 @@ const SearchResults = (props) => {
               />
             );
           })}
-      </section>
-    </div>
+      </SearchList>
+    </SectionSongs>
   );
 };
 

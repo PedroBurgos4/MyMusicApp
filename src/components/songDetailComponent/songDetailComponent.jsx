@@ -1,7 +1,12 @@
 import { useParams } from "react-router";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router";
-import "./songDetailComponent.css";
+import {
+  SectionAlbumDetail,
+  BackButton,
+  AlbumDetail,
+} from "./SongDetailComponentStyled";
+// import "./songDetailComponent.css";
 const SongDetail = () => {
   let idalbum = useParams();
   let album = useFetch(
@@ -9,16 +14,16 @@ const SongDetail = () => {
   );
 
   return (
-    <div className="sectionAlbumDetail">
+    <SectionAlbumDetail>
       <Link to="/">
-        <button className="searchButton">Volver</button>
+        <BackButton>Volver</BackButton>
       </Link>
       {album.loading === true && <p>Cargando...</p>}
       {album.error !== null && <p>{album.error}</p>}
       {album.data !== null &&
         album.data.album.map((element, index) => {
           return (
-            <div key={index} className="albumDetail">
+            <AlbumDetail key={index}>
               <div>
                 <img src={element.strAlbumThumb} alt={element.strAlbum} />
               </div>
@@ -52,15 +57,15 @@ const SongDetail = () => {
                   {element.strGenre}
                 </p>
               </div>
-            </div>
+            </AlbumDetail>
           );
         })}
       {album.data !== null && (
         <Link to="/">
-          <button className="searchButton">Volver</button>
+          <BackButton>Volver</BackButton>
         </Link>
       )}
-    </div>
+    </SectionAlbumDetail>
   );
 };
 
